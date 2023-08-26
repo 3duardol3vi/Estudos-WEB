@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--colocando o meu primeiro favicon com favicon.io-->
+        <link rel="shortcut icon" href="imagens/favicon_io/html5favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+       
+        
+        <!-- fim do favicon-->
+
+        <!--linkando css-->
+        <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
+        <script src="jquery-3.6.3.js"></script>
+        <script src="dist/js/bootstrap.min.js"></script>
+        <title>EX01</title>
+    </head>
+    <body>
+        <h1>olá, mundo!</h1>
+        <button type="button" class="btn btn-info"><a href="test.html">bootstrap teste</a></button>
+        <i class="fa-solid fa-user"></i>
+        <!-- mostrar tags na tela-->
+        <p>teste de &lt;p&gt; e &lt;/p&gt;</p> <!-- less than e greater then-->
+
+        <!-- quebra de linhas -->
+        <p>quebra de linha com <br> &lt;br&gt;</p>
+
+        <!-- carregar img-->
+        <p>carregando imagens</p>
+        <img src="imagens/css3logo200.png" alt="logo css3">
+        <img src="imagens/html5200.png" alt="logo html5">
+        <img src="imagens/favicon_io/html5favicon.ico" alt="favicon">
+
+        <!--hierarquia de títulos-->
+        <p>hierarquia de títulos abaixo</p>
+       
+        <h1>entendendo portugal</h1>
+            <h2>introdução</h2>
+                <h3>justificação da temática</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit libero debitis facere consectetur. Ab nemo optio, veniam temporibus quibusdam mollitia fugit est maiores voluptate, quas eligendi impedit repellat architecto dolore.</p>
+            
+                    
+
+                <h3>caráter excepcional</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit libero debitis facere consectetur. Ab nemo optio, veniam temporibus quibusdam mollitia fugit est maiores voluptate, quas eligendi impedit repellat architecto dolore.</p>
+
+                <h3>perguntas de...</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit libero debitis facere consectetur. Ab nemo optio, veniam temporibus quibusdam mollitia fugit est maiores voluptate, quas eligendi impedit repellat architecto dolore.</p>
+
+                <h3>metodologia...</h3>
+                    <h4>etapa de...</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit libero debitis facere consectetur. Ab nemo optio, veniam temporibus quibusdam mollitia fugit est maiores voluptate, quas eligendi impedit repellat architecto dolore.</p>
+
+                    <h4>instrumento de...</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit libero debitis facere consectetur. Ab nemo optio, veniam temporibus quibusdam mollitia fugit est maiores voluptate, quas eligendi impedit repellat architecto dolore.</p>
+
+            <h2>o ordenamento do território</h2>
+                <h3>os instrumentos...</h3>
+                    <h4>os instrumentos de...</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit libero debitis facere consectetur. Ab nemo optio, veniam temporibus quibusdam mollitia fugit est maiores voluptate, quas eligendi impedit repellat architecto dolore.</p>
+
+                    <h4>os territórios</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit libero debitis facere consectetur. Ab nemo optio, veniam temporibus quibusdam mollitia fugit est maiores voluptate, quas eligendi impedit repellat architecto dolore.</p>
+        <!-- formatação de textos -->
+        <h1>formatação de texto</h1>
+            <h2>NEGRITO/ITÁLICO/ÊNFASE</h2>
+                <p>usando o <b>NEGRITO</b> usando a tag B. (não semântica)</p>
+                <p>e nesta frase temos um <strong>termo em destaque</strong> usando a tag strong. (semântica)</p>
+                <p>usando <i>itálico</i> usando a tag I. (não semântica)</p>
+                <p>usando a tag em para dar ênfase a <em>um termo de destaque.</em> (com semântica)</p>
+
+            <h2>TEXTO MARCADO</h2>
+                <p><mark>TEXTO MARCADO</mark></p>  
+            <h2>TEXTO GRANDE E PEQUENO</h2>
+                <p><big>Esta tag big está obsoleta</big> e a tag <small>não está</small></p>
+            
+            <h2>TEXTO DELETADO</h2>
+                <p><del>Texto deletado</del></p>
+
+            <h2>TEXTO INSERIDO, SOBRESCRITO E SUBSCRITO</h2>
+                <p>Exemplo de texto <ins>inserido com ênfase e com semântica</ins></p>
+                <p>Exemplo de texto <u>inserido sem ênfase e sem semântica</u></p>
+                <p>Exemplo de texto sobrescrito: X<sup>2</sup></p>
+                <p>Exemplo de texto subscrito: H<sub>2</sub>O</p>
+
+            <h2>Código fonte e pré-formatação</h2>
+                <p>O comando <code>document.getElementById('asd')</code> tem o mesmo valor de espaço de uma letra para a outra. usada para códigos</p>
+
+                <p>agora vamos ter uma com a tag pre (para formatação) e com a tag code</p>
+                <pre>
+                    <code>
+        const teste = document.getElementById('testando').value;
+
+        alert(teste);
+
+                    </code>
+                </pre>
+
+                <h2>citação simples e completa</h2>
+                    <p>frase: <q>a imaginação e mais importante que o conhecimento</q></p>
+                    
+                    <p>frase com blockquote com link de citação:</p>
+                    <blockquote cite="https://www.pensador.com/frase/MjU2OQ/">
+                          a imaginação e mais importante que o conhecimento
+                    </blockquote>
+
+                    <p>inverter palavras com tag bdo <bdo dir="rtl">Eduardo Levi</bdo></p>
+                
+                <h2>Lista ordenada</h2>
+                    <ol type="1" start="4"> 
+                        <!-- tipos "1, A, a, I, i" e start (de onde começa) -->
+                        <li>acordar</li>
+                        <li>levantar</li>
+                        <li>beber água</li>
+                        <li>merendar</li>
+                    </ol>
+                <h2>Lista não ordenada</h2>
+                    <ul type="square">
+                        <!-- tipos(circle, square, disc) -->
+                        <li>alface</li>
+                        <li>tomate</li>
+                        <li>manga</li>
+                    </ul>
+                
+                <h2>Lista de definição</h2>
+                    <dl> <!-- tag q inicia a lista de definição -->
+                        <dt>JavaScript</dt> <!-- termo -->
+                        <dl>Linguagem de programação usada para...</dl> <!-- definição do termo -->
+                    </dl>
+
+                <h2>links externos com a tag a</h2>
+                    <p>vou abrir o <a href="https://google.com" target="_blank" rel="external">google</a> em uma nova pagina usando o target _blank para uma nova guia em branco e rel external para dizer que é externo</p>
+
+                <h2>download</h2>
+                    <ul> 
+                        <!-- iana.org/assigments/media-types -->
+                        <li><a href="arquivos/winrar-x64-611br.exe" download="winrar-x64-611br.exe" type="application/zip">baixar winrar</a></li>
+                    </ul>
+
+                <h2>Usando tamanho da tela para carregar diferentes imagens</h2>
+
+                <picture>
+                    <!-- cuidado ao inverter os sources -->
+                    <source media="(max-width: 750px)" srcset="imagens/imagem-p.png" type="image/png">
+
+                    <!-- se a largura da tela for menor que 750px ent a imagem que vai ser carregada será a de tamanho 300x300 -->
+                    <source media="(max-width: 1050px)" srcset="imagens/imagem-m.png" type="image/png">
+                    <!-- se a largura da tela for menor que 1050px ent a imagem que vai ser carregada será a de tamanho 700x700 -->
+                    <img src="imagens/imagem-G.png" alt="imagem flexível">
+                    <!-- imagem carregada por padrão -->
+                </picture>
+
+                <h2>Reproduzindo áudio</h2>
+                <audio src="midia/SunnyDay.mp3" controls loop> 
+                    <!-- controls = mostra os controles do audio; loop = loop; e autoplay = começa a tocar o áudio sozinho; -->
+                    <!-- mp3 wav ogg -->
+                </audio>
+
+                <h2>segunda maneira parecida com o carregamento de imagem</h2>
+                <audio preload="metadata" controls loop>
+                    <source src="midia/SunnyDay.mp3" type="audio/mpeg"><!--  vai ser o primeiro que o navegador vai tentar carregar. Se ele n conseguir, vai tentar o proximo e assim por diante -->
+                    <source src="midia/SunnyDay.ogg" type="audio/ogg">
+                    <source src="midia/SunnyDay.wav" type="audio/wav">
+                    <!-- wav é muito pesado -->
+                    <p>infelizmente se navegador n consegue reproduzir o áudio. <a href="midia/SunnyDay.mp3">Baixe ele para escutá-lo</a></p>
+
+                </audio>
+
+                <h2>agora com vídeo localmente</h2>
+                <video width="300" poster="imagens/imagem-M.png" height="300" controls>
+                    <source src="midia/pexels-matthias(720p).mp4" type="video/mp4">
+                    <source src="midia/Pexels-Matthias(720P).mkv" type="video/mkv">
+                    <source src="midia/Pexels-Matthias(720P).webm" type="video/webm">
+                    <source src="midia/pexels-matthias_720p_.ogv" type="video/ogg">
+                    <p>nao foi possivel reproduzir o video no seu navegador</p>
+                </video>
+
+                <h2>colocando video do youtube</h2>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3hng-hmSv2Y" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+    </body>
+</html>

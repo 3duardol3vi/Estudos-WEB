@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <link rel="shortcut icon" href="../ex1/imagens/css3logo200.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+    <title>Módulo 2</title>
+
+    <style>
+        /* importando fonte da internet */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+        /* importando fonte baixada */
+        @font-face {
+            font-family: 'reailge';
+            src: url(fontes/reailge/reailge.otf) format(opentype);
+
+            /* tipos de formatos
+            opentype (otf)
+            truetype (ttf)
+            embedded-opentype
+            truetype-aat (apple advanced typography)
+            svg */
+        }
+
+        /*
+        medidas absolutas
+            cm, mm, in(polegada), px, pt(ponto), pc(paica)
+
+        medidas relativas
+            em(relativa ao tamanho atual da fonte M), fr, ex(relativa a uma altura X de uma fonte), rem, vw, vh, %
+
+            16px = 1em
+        
+            */
+
+            body{
+                font-family: 'reailge', Arial, Helvetica, sans-serif;
+                font-size: 1em;
+                
+            }
+           
+            h1{
+                /* font-family: 'Courier New', Courier, monospace;
+                font-size: 3em;
+                font-weight: 900;
+                font-style: italic; */
+
+                /* shorthand font(tudo em uma linha) */
+                /* na ordem => font-style font-weight font-size font-family */
+                font: italic 900 3em 'Courier New', Courier, monospace;
+            }
+            #pa{
+                font-family: 'Roboto Condensed', sans-serif;
+                /* fonte importada da internet */
+            }
+            h2{
+                 text-align: center; /*centraliza no centro */
+            }
+            p{
+                text-indent: 20px; /*espaço dos inicios dos paragrafos*/
+                text-align: justify;
+            }
+
+            /* trabalhando com as pseudoclasses
+                # id = so pode ter um por documento
+                . classe = pode ter varios com a mesma classe e um mesmo com varias
+                : pseudoclasses 
+                :: pseudoelementos
+                > filho
+            */
+            div > p{display: none;}
+            div{
+               float: left; /*linha com caracteristicas de bloco*/
+                width: 300px;
+                height: 300px;
+                text-align: center;
+                background-color: rgba(180, 180, 180, 0.678);
+                border: 1px solid black;
+                margin: auto;
+                
+            }
+            div:hover{
+                background-color: rgb(102, 102, 102);
+                
+            }
+            div:hover > p{
+                display: block;
+                padding: 10px;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+                font-family: 'Robot Condensed', sans-serif;
+                margin: 10px;
+                font-weight: bold;
+            }
+            a:hover{
+                color: rgba(65, 65, 65, 0.795);
+            }
+            a:visited{
+                color: gray;
+            }
+            a:active{
+                background-color: azure;
+            }
+            a::after{
+                content: '\2190';
+            }
+            a::before{
+                content: '\2192';
+            }
+    </style>
+</head>
+<body>
+    <h1>MÓDULO 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis ad nihil laudantium odio iusto modi, eligendi soluta, velit nam nulla odit illo eius, rem at maxime esse voluptatibus facilis tenetur!</p>
+        <p id="pa">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio at natus vel repellendus obcaecati tempora iure, ab corporis ullam quod omnis odio incidunt quo libero, nihil nesciunt voluptas cupiditate molestias?</p>
+        
+    <h2>tags de alinhamento</h2>
+    <p>text-aling: center, right, left, justify</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, dicta repellendus repellat molestias facere sint nostrum id eaque ipsam placeat sequi, ab illum, quo quisquam quidem est deserunt nulla asperiores. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores consequatur unde magni provident cumque nesciunt earum laudantium tempore laboriosam ad necessitatibus repellat harum, voluptatem temporibus. Natus unde illum similique? Repudiandae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae culpa aperiam, assumenda voluptatibus laudantium itaque? Illum, ipsam in? Exercitationem odio harum quidem ex reprehenderit blanditiis nulla similique voluptatibus et impedit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad est consequuntur consectetur similique aliquam assumenda odio, voluptatem id tempora, rem nihil eum pariatur necessitatibus sit perspiciatis consequatur fugiat repellendus nesciunt?</p>
+
+    <h2>Pseudoclasses</h2>
+        <div>
+            <p>01</p>
+        </div>
+        <div>
+            <p>02</p>
+        </div>
+        <div>
+            <p>03</p>
+        </div>
+        <a href="estrutura.html">estrutura</a>
+</body>
+</html>
