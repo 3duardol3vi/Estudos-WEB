@@ -1,3 +1,2 @@
 # Estudos WEB
- estudos
-    teste github
+ alterei o readme para teste github
