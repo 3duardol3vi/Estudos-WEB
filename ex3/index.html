@@ -8,15 +8,31 @@
 
         body{
             margin: 0px; padding: 0px;
-            background-size: 100px 100px;
-            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            /* background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png'); */
+            background-image: url('imagens/wallpaper002.jpg');
             background-repeat: no-repeat;
             background-position: center center;
             height: 100vh;
             background-color: rgba(51, 51, 51, 0.863);
+            background-size: cover;
+            background-attachment: fixed;
+            /* background-attachment: ; tbm pode ser scroll */
             /* background-repeat: repeat-x; repete na horizontal */
             /* background-repeat: repeat-y; repete na vertical  */
             /* background-position: ; é sobre a posição da imagem no fundo passando dois parametros: (left right center | top center bottom ) */
+
+            /* background-size: ; pode ser auto, com pixels como 100% 100%, contain(que tenta encaixar a imagem no fundo) e cover (tbm encaixa a img no fundo mas ele faz cortes para que o encaixe seja mais responsivo) */
+
+        }
+
+        div.q1{
+            width: 300px;
+            background-color: white;
+            padding: 10px;
+            margin: auto;
+            border: 1px solid black;
+            border-radius: 15px;
+            position: relative;top: 2vh;
 
         }
        
@@ -46,5 +62,19 @@
     <!-- <div class="quadrado" id="q1"></div>
     <div class="quadrado" id="q2"></div>
     <div class="quadrado" id="q3"></div> -->
+
+    <main>
+        <div class="q1">
+            <h2>posicionamento de img</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vitae dolor, magni incidunt tenetur distinctio fugiat nostrum voluptate ipsum culpa totam possimus rerum vero earum similique illo itaque, minus laudantium?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vitae dolor, magni incidunt tenetur distinctio fugiat nostrum voluptate ipsum culpa totam possimus rerum vero earum similique illo itaque, minus laudantium?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vitae dolor, magni incidunt tenetur distinctio
+            fugiat nostrum voluptate ipsum culpa totam possimus rerum vero earum similique illo itaque, minus laudantium?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vitae dolor, magni incidunt tenetur distinctio
+            fugiat nostrum voluptate ipsum culpa totam possimus rerum vero earum similique illo itaque, minus laudantium?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat vitae dolor, magni incidunt tenetur distinctio fugiat nostrum voluptate ipsum culpa totam possimus rerum vero earum similique illo itaque, minus laudantium?</p>
+           
+        </div>
+    </main>
 </body>
 </html>
