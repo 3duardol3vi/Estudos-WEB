@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>posicionamento vertical</title>
+
+    <style>
+        #container{
+            position: relative;
+            height: 96vh;
+            background-color: purple;
+            background-image: url('ex3/imagens/target001.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding: 20px;
+        }
+        #conteudo{
+            height: 250px;
+            background-color: aqua;
+            width: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-image: url('ex3/imagens/target001.png');
+            background-size: 100% 100%;
+
+            transform: translate(-50%, -50%);
+            /* transform translate usa como referencia o meio exato da box e tem como parametros x e y, onde o primeiro se refere ao eixo x(onde valores negativos vai para esquerda e positivos para direita) e eixo y(onde valores positivos vai para baixo e negativos vai para cima) exemplo transform: translate(20px 20px); 20px para a direita e 20px para baixo */
+
+            
+
+        }
+    </style>
+</head>
+<body>
+    <!-- guanabara diz que sempre que quiser centralizar verticalmente deve ter um container e um conteúdo -->
+    <section id="container">
+        <article id="conteudo">
+            
+        </article>
+    </section>
+        <iframe style="margin-top: 100px;" width="560" height="315" src="https://www.youtube.com/embed/-w0Qo_qQiRg?si=p3k1Y83FXBLvGM7H"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+</body>
+</html>
