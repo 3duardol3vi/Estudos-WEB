@@ -1,7 +1,27 @@
 @charset "UTF-8";
 
+@font-face {
+        font-family: 'SFProDisplay';
+        src: url('../fonts/sfpro/SFPRODISPLAYREGULAR.OTF') format(opentype);
+    }
+
+:root{
+   --font1: 'SFProDisplay';
+}
+
 body{
     margin: 0; padding: 0;
     background-color: #F0F2F5;
     font-family: Helvetica, Arial, sans-serif;
+
 }
+
+h2{
+    font-family: var(--font1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    color: #1c1e21;
+}
+ 
