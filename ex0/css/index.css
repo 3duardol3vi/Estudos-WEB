@@ -23,5 +23,58 @@ h2{
     font-size: 28px;
     line-height: 32px;
     color: #1c1e21;
+    width: 500px;
+    padding-bottom: 20px;
 }
+
+div.container{
+    height: 100vh;
+}
+div.subcont{
+    padding-top: 72px;
+    padding-bottom: 112px;
+}
+
+div.TextoeForm{
+    height: 536px;
+    padding: 20px 0px;
+    margin: auto;
+   
+   
+
+}
+.textoP{
+    display: inline-block;
+    box-sizing: border-box;
+    padding-right: 32px;
+    vertical-align: top;
+    margin: auto;
+}
+
+.PainelImg{
+    /* height: 182px;
+    /* width: 548px; */
+    padding-top: 112px;
+    padding-bottom: 16px;
+    
+}
+.PainelImg > img{
+    height: 106px;
+    width: 301px;
+    border: 0;
+}
+.formP{
+    display: inline-block;
+    vertical-align: top;
+    height: 496px;
+    margin: auto;
+    width: 400px;
+ 
+}
+
+div.formulario{
+    background-color: #FFFFFF;
+    padding: 10px 20px 24px 20px;
+}
+
  
