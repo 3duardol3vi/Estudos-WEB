@@ -28,18 +28,13 @@ body{
 }
 
 .contentPainel{
-    height: 80vh;
+    height: 74vh;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     text-align: center;
     flex-wrap: wrap;
 
-}
-
-.contentFooter{
-    height: 20vh;
-    display: flex;
 }
 
 .subcontentInfo{
@@ -94,7 +89,7 @@ h1{
     height: 48px;
     border-radius: 8px;
     font-size: 17px;
-    /* padding-left: 5px; */
+    padding-left: 9px;
 }
 
 .inputs:focus{
@@ -141,7 +136,7 @@ input::placeholder{
     cursor: pointer;
 }
 
-hr{
+.hr1{
     width: 96%;
     border: 1px solid #dadde1b4;
     
@@ -149,6 +144,8 @@ hr{
 }
 a{
     text-decoration: none;
+}
+.esq{
     color: #1877f2;
     font-size: 14px;
 }
@@ -162,3 +159,81 @@ p{
     font-size: 14px;
     text-align: center;
 }
+
+.contentFooter{
+    height: 26vh;
+    display: flex;
+    background-color: #ffffff;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    margin: 0;
+    padding-top: 20px;
+    
+}
+.contentFooter > ul > li{
+    float: left;
+    list-style-type: none;
+    padding-left: 15px;
+    font-size: 12px;
+}
+.hr2{
+    width: 51%;
+    border: 1px solid #dadde1b4;
+    /* margin: 0; */
+}
+.contentFooter > ul{
+    width: 50vw;
+    margin: 0px;
+}
+
+
+
+.contentFooter > ul > li > a, .contentFooter > ul > ul > li > a{
+    color: #95979B;
+
+}
+
+.topfooter{
+    padding: 0px;
+}
+.topfooter > li{
+    text-align: start;
+}
+.endul{
+    padding: 0px;
+}
+.endul > li{
+    padding-bottom: 6px;
+}
+span{
+    color: #95979B;
+    font-size: 11px;
+    display: block;
+    width: 50vw;
+    text-align: start;
+    
+}
+/*
+
+.endfooter{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center ;
+}
+.endfooter > ul > li > a{
+
+}
+.endul{
+    float: left;
+    display: flex;
+    list-style-type: none;
+    padding: 17px;
+    gap: 1rem;
+    
+}
+
+.endul > li{
+    color: #737373;
+
+} */
