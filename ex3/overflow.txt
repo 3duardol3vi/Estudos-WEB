@@ -1,0 +1,37 @@
+O overflow é uma propriedade de estilo do CSS utilizada para tratar conteúdos que ultrapassam os limites de um elemento.
+    O objetivo do overflow é fazer com que conteúdos muito grandes possam caber dentro de uma página através do uso de
+    barras de rolagem.
+    
+    Apenas com essa configuração já é suficiente para tornar a nossa tabela responsiva. Na prática, quando essa tabela for
+    aberta numa tela com uma largura inferior à mesma, ela será "cortada" e exibida dentro de uma caixa com barras de
+    rolagem horizontal, evitando o vazamento.
+    
+    Toda essa adaptação ocorre de forma automática, isso se deve ao fato de usarmos o valor "auto". Esse valor (auto) exibe
+    barras de rolagem somente quando necessário, somente quanto a largura do container se torna insuficiente para exibir o
+    elemento.
+    
+    PROPRIEDADE - OVERFLOW:
+    
+    Usamos a propriedade " overflow-x ", entretanto existem também o " overflow-y " e o " overflow ". Segue uma descrição de
+    cada um deles:
+    
+    overflow-x - A propriedade CSS "overflow-x" é usada para definir o que deve ser mostrado quando o conteúdo transborda
+    dos extremos esquerdo e direito de um elemento em bloco (eixo horizontal).
+    
+    overflow-y - A propriedade CSS "overflow-y" define o que deve ser mostrado quando o conteúdo transborda dos extremos
+    superior e inferior de um elemento em bloco (eixo vertical).
+    
+    overflow - A propriedade CSS "overflow" é uma abreviação para as propriedades "overflow-x" e "overflow-y" em uma única
+    declaração.
+    
+    As propriedades overflow aceitam alguns valores, dentre os principais:
+    
+    visible - O valor "visible" exibe o conteúdo que exceder o tamanho do elemento fora da área designada para ele, (valor
+    padrão).
+    
+    hidden - O valor "hidden" simplesmente corta o conteúdo que exceder o tamanho do elemento.
+    
+    scroll - O valor "scroll" exibe "a todo momento" barras de rolagem para permitir que o usuário role o conteúdo que
+    exceder o tamanho do elemento.
+    
+    auto - O valor "auto" exibe barras de rolagem somente quando necessário (largura ou altura insuficientes)

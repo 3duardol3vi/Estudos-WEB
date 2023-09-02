@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+        table{
+            width: 300px;
+            height: 300px;
+            border-collapse: collapse;
+            /* collapse junta as bordas, o separate separa elas */
+        }
+        .linha{
+            background-color: rgba(202, 188, 188, 0.61);
+            
+        }
+        td{
+            
+            border: 1px solid black;
+            padding-top: 10px;
+            text-align: center;
+            vertical-align: top;
+            /* pode ser top, middle e bottom */
+        }
+    </style>
+</head>
+<body>
+    <h2>TABELAS</h2>
+        <!--Hierarquia de tabelas simples
+                TABLE tag que inicia uma tabela
+                    TABLE ROW tag que inicia uma linha de uma tabela
+                        TABLE HEADER cabeçalho da tabela
+                        TABLE DATA dado da tabela
+        -->
+
+    <table>
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+            <td>D1</td>
+        </tr>
+        <tr class="linha">
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+            <td>D2</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+            <td>D3</td>
+        </tr>
+    </table>
+</body>
+</html>
