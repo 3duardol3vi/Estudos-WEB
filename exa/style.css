@@ -1,0 +1,161 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-size-adjust: 100%;
+     outline: 0px;
+    /* https://nubank.com.br/images-cms/1650479239-woman-holding-card-smiling-2-lg-3x.jpg?w=1152&dpr=1&auto=compress&fm=webp */
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url("https://db.onlinewebfonts.com/t/0ff8990774ec4865c7f45befbafd4910.eot");
+    src: url("https://db.onlinewebfonts.com/t/0ff8990774ec4865c7f45befbafd4910.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/0ff8990774ec4865c7f45befbafd4910.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/0ff8990774ec4865c7f45befbafd4910.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/0ff8990774ec4865c7f45befbafd4910.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/0ff8990774ec4865c7f45befbafd4910.svg#Gotham Regular")format("svg");
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#content{
+    display: flex;
+    height: 100vh;
+    min-width: 100vw;
+
+}
+
+.sectionForm{
+    font-family: 'Gotham';
+    height: 100vh;
+    width: 100vw;
+    background-color: #BBA9D2;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.imgsectionform{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    
+}
+.imgsectionform > img, .imgsectionform > source{
+    width: 100vw;
+    height: 99.6vh;
+    object-fit: cover;
+    /* object-position: px; */
+
+}
+
+.contentHome{
+    z-index: 2;
+    display: flex;
+    width: 90vw;
+    justify-content: space-between;
+    padding-right: 0px ;
+    flex-wrap: wrap;
+}
+
+.tituloHome{
+
+    
+}
+
+.contentHome h1{
+    width: 490px;
+    font-size: 3rem;
+    line-height: 1.16em;
+    color: white;
+    font-weight: 900;
+        letter-spacing: -0.03em;
+
+
+
+}
+
+h3{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    text-align: start;
+    width: 300px;
+    letter-spacing: -0.02em;
+
+}
+
+.form{
+    width: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 17px;
+    padding: 24px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+input{
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #dbdbdb;
+    font-size: 1.125rem;
+    text-align: left;
+    padding: 8px 0px;
+}
+
+input:focus{
+    border-bottom: 1px solid black;
+}
+
+button{
+    background-color: #e7e7e7;
+    border: none;
+    height: 48px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 1rem;
+    color: #bcbcbc;
+
+}
+
+button::after{
+    content: '\2192';
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+@media (max-width: 1152px){
+    .contentHome{
+        flex-direction: column;
+        align-items: end;
+        justify-content: space-around;
+        width: 100vw;
+        height: 100vh;
+        padding: 0px 48px;
+        
+    }
+    .tituloHome{
+        width: 100%;
+    }
+    .tituloHome > h1{
+        width: 95vw;
+        text-align: center;
+        letter-spacing: -0.03em;
+    }
+    
+}
