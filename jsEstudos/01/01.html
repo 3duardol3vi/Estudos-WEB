@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0; padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body{
+            height: 100vh;
+        }
+
+        #content{
+            height: 40vh;
+        }
+
+        #content > div{
+            height: 100%;
+            background-color: rgba(73, 69, 69, 0.74);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1{
+            color: white;
+            margin: auto;
+        }
+
+
+    </style>
+</head>
+<body>
+  
+    <script>
+
+         //    data type
+    //    number (Infinity e NaN)
+    //    String
+    //    Boolean
+    //    null
+    //    undefined
+    //     Object (array)
+    //     function
+
+       // window.alert('Óla Mundo');
+        //window.confirm('Está Gostando?');
+
+       
+       
+    //     var asd = window.prompt('nome?')
+    //    window.alert('prazer, ' + asd + '!')
+
+        
+
+        // var n1 = Number.parseFloat(window.prompt('digite um número: '))
+        // var n2 = Number.parseInt(window.prompt('digite outro número: '))
+
+        //posso simplificar isso e deixar só number, assim o proprio js vai reconhecer se é parseInt ou parseFloat
+
+      //  var soma = (n1 + n2) // concatenação ou soma?
+
+        // window.alert(soma)
+
+        
+
+
+        //converter para string
+            //pode ser toString(s)
+            // ou String(s)
+        
+
+            //formatando string
+            //o aluno ${nome} com ${idade} anos tem uma nota de ${nota}
+
+
+            //s.length diz quantos caracteres tem a string
+            //s.toUpperCase() tudo para "MAIUSCULAS"
+            //s.toLowerCase() tudo para "minusculas"
+
+
+            // var nomee = window.prompt('Nome?')
+
+            // document.write(`seu nome é <strong>${nomee}</strong> e tem ${nomee.length} letras<br>`);
+            //  document.write(`seu nome em maiusculo é ${nomee.toUpperCase()}`)
+
+
+
+
+            //sobre casas decimais com toFixed() e trocar coisas especificas com replace()
+            var n11 = 1234424.6
+            
+            // n11 = n11.toFixed(3) adiciona 3 casas decimais
+            // n11 = n11.toFixed(2).replace('.', ',')
+
+            console.log(typeof n11)
+            var a = n11.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+             console.log(a)
+            console.log(typeof a)
+
+            //colocando o valor como padrao brasileiro... tbm tem USD e EUR
+            
+           
+             
+
+
+       
+
+    </script>
+</body>
+</html>
