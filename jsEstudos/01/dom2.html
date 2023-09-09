@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 2 | eventos DOM</title>
+    <style>
+        div{
+            height: 200px; width: 200px;
+            background-color: rgb(17, 112, 112);
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            line-height: 200px; 
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1" onclick="cliq()">
+        ola
+    </div>
+
+    <div id="div2">com addEnventListener</div>
+
+    <script>
+        // exemplos, mouseenter, mouseup, mousedown, mousemove, click, mouseout
+
+        function cliq(){
+            // alert('a')
+            document.querySelector('#div1').innerHTML = '<strong>clicou</strong>'
+        }
+
+        //usando addEnventListener
+        var evento = window.document.getElementById('div2')
+        evento.addEventListener('click', cliquei)  //primeiro vem o evento e em segundo a funcao que vai ser chamada, mas sem os parenteses
+        function cliquei(){
+            alert('eventListener funcionando')
+        }
+    </script>
+</body>
+
+</html>

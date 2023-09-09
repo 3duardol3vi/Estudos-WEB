@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>DOM</h1>
+
+    <p>teste de arvore dom</p>
+    <p><strong>dom dom</strong></p>
+
+    <div id="div1">por ID</div>
+    <div name ="div2">por Name</div>
+
+    <div class="div3">por querySelector</div>
+
+    <script>
+        var p = window.document.getElementsByTagName('p')[1]
+        // o [0] significa qual paragrafo eu quero buscar, sendo o 0 o primeiro e o 1 o segundo e assim por diante
+
+        window.document.write('esta escrito: ' + p.innerHTML)
+        // innerText é diferente de innerHTML pq o segundo é formatado, ou seja ele puxa as tags filhas junto, diferente do primeiro que coloca apenas o texto sem formatação
+
+        var div1 = window.document.getElementById('div1')
+        div1.style.backgroundColor = 'green'
+        //ou
+        document.getElementById('div1').innerText = 'ID'
+        document.getElementById('div1').style.margin = '10px'
+
+        //por name
+        document.getElementsByName('div2')[0].style.backgroundColor = 'red'
+
+        //sempre lembrar de que quando for plural tenho que escolher qual pegar[0]
+
+        //o mesmo principio ser para ClassName, mas o mais recomendo é pelo seletor, usando o querySelector() e querySelectorAll()
+
+        var seletor = document.querySelector('div.div3') //ou
+                    //   document.querySelector('#div3') ou
+                    // document.querySelector('.div3')  
+        seletor.style.backgroundColor = 'yellow'
+    </script>
+</body>
+</html>

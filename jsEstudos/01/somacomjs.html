@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operações</title>
+</head>
+<body>
+
+    <h1>OPERAÇÃO DE SOMA</h1>
+    <input type="number" name="i1" id="i1"> +
+    <input type="number" name="i2" id="i2">
+    <button class="calcuN">SOMAR</button>
+    <div id="res" style="margin-top: 50px;">RESULTADO</div>
+
+    <script>
+        
+        var btn = document.querySelector('.calcuN')
+            btn.addEventListener('click', calc)
+            
+        function calc(){
+           // var input1 = document.querySelector('#i1')
+          //  var input2 = document.querySelector('#i2')
+            //var n1 = Number(input1.value)
+            //var n2 = Number(input2.value)
+            
+            //forma mais simplificada
+            var n1 = Number(document.querySelector('#i1').value)
+            var n2 = Number(document.querySelector('#i2').value)
+
+            var resultado = document.querySelector('#res')
+            var res = n1 + n2
+            resultado.innerHTML = `O resultado de ${n1} + ${n2} = ${res}`
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>
