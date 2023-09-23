@@ -22,11 +22,11 @@ var btnclicado = document.querySelector('#btn')
     
                 var resultado = document.querySelector('#res')
 
-                var genero
+                var genero = sexo[0].checked ? 'Homem' : 'Mulher'  
 
                 if(sexo[0].checked){
                     // se sexo[0] estiver checado, significa que a caixa masculino está marcada
-                    genero ='Homem'
+                    //genero ='Homem'
                     if(idade >=0 && idade <=12){
                         img.setAttribute('src', 'img/kidh.png')
                         //to dizendo que a a tag imagem vai receber uma 'src' e essa src vai conter 'img/kidh.png' 
@@ -44,7 +44,7 @@ var btnclicado = document.querySelector('#btn')
                     }
                 }else{
                     // se sexo[1] estiver checado, significa que a caixa feminina está marcada
-                    genero ='Mulher'
+                   // genero ='Mulher'
                     if(idade >=0 && idade <=12){
                         img.setAttribute('src', 'img/kidm.png')
                         

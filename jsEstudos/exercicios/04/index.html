@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+
+    <style>
+        body {
+            background-color: rgb(84, 141, 194);
+            font: normal 18px arial;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+        }
+
+
+
+
+        footer {
+            font-style: italic;
+            color: white;
+            text-align: center;
+             
+        }
+
+        .md {
+            display: flex;
+            flex-direction: column;
+            width: 650px;
+            background-color: white;
+            gap: 20px;
+            padding: 30px;
+            align-items: center;
+            margin: auto;
+
+            border-radius: 8px;
+
+            -webkit-box-shadow: 5px 9px 11px 0px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 5px 9px 11px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 9px 11px 0px rgba(0, 0, 0, 0.3);
+
+
+        }
+        .mdd{
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            
+
+        }
+
+        #selectR {
+            padding: 10px;
+        }
+
+        button {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Contador</h1>
+    </header>
+
+    <div class="md">
+        <div class="mdd">
+            <label for="iin">Número 1:</label><input type="number" name="in" id="iin">
+            <label for="iin">Número 2:</label><input type="number" name="in2" id="iin2">
+            
+            <button class="btn">CALCULAR</button>
+        </div>
+        <div class="res">
+            <select name="selectR" id="selectR" size="10">
+                <option value="">Digite um número acima!</option>
+            </select>
+        </div>
+    </div>
+
+    <footer>
+        <p>tirado do &copy; CursoemVideo</p>
+    </footer>
+
+    <script>
+            let btn = document.querySelector('.btn')
+            btn.addEventListener('click', contar)
+
+        function contar() {
+            let iin = document.querySelector('#iin')
+            let iin2 = document.querySelector('#iin2')
+
+
+            if(iin.value.length == 0 || iin2.value.length == 0){
+                alert('ERRO DIGITE UM NUMERO')
+            }
+            else{
+
+                let num = Number(iin.value)
+                let num2 = Number(iin2.value)
+                let select = document.querySelector('#selectR')
+                select.innerHTML = '' //apagando para que sempre que eu digitar um novo numero ele n ficar juntando com o ultimo teste
+                let x
+                // let cont = 1
+                for(let cont = 1;cont <= num2; cont++){
+                let item = document.createElement('option')// o 'let item' tem que ficar dentro da repetição, coloquei fora e fiquei me pegutando pq so criava uma vez e so mostrava o ultimo resultado
+
+                    x = num * cont
+                    item.text = `${num} x ${cont} = ${x}`
+                    item.value = `item${cont}`
+
+                    select.appendChild(item)
+
+ 
+                }
+
+                
+            }
+        }
+    </script>
+</body>
+
+</html>

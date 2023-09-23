@@ -35,7 +35,7 @@
 
     ex: media>=7 ? aprovado : reprovado
 
-    ----------------------------------------------------------
+    -----------------------------------------------------------------
 
     DOM (document object model)
 
@@ -52,4 +52,13 @@
     por ID - getElementById('')
     por nome - getElementsByName('')
     por classe - getElementsByClassName('')
-    por seletor -
+    por seletor - querySelector('')
+    
+    -----------------------------------------------------------------
+
+    REPETIÇÔES
+    do while, while - While: Executa o loop enquanto a condição for verdadeira. Do While: Executa o loop primeiro e depois verifica a condição.
+
+
+    for - for(inicio; teste; incremento)
+        ex: for(let x = 0; x > 101; x++){}

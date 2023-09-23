@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="tex">
+    <button class="btn" onclick="enviar()">ENVIAR</button>
+    <button onclick="mostrar()">MOSTRAR</button>
+    <div class="res" >NOMES DIGITADOS</div>
+
+    <script>
+        let texto = document.querySelector('#tex')
+        let res = document.querySelector('.res')
+
+        let tt = []
+        function enviar(){
+            //  console.log(texto)
+
+            tt.push(texto.value)
+             console.log(tt)
+
+        
+        }
+        function mostrar(){
+            res.innerHTML = ''
+            res.innerHTML += tt 
+            
+        }
+    </script>
+</body>
+</html>

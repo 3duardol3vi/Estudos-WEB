@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex05</title>
+
+    <style>
+        body{
+            margin: 0; padding: 0; box-sizing: border-box;
+            background-color: rgb(231, 255, 251);
+            font-family: Arial, Helvetica, sans-serif;
+
+            height: 100vh;
+
+            
+        }
+
+        .container{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 80vh 20vh;
+
+            grid-template-areas: "main sele"
+                                 "ft ft" ;
+            height: 100vh;
+
+           
+        }
+
+        .main{
+            grid-area: main;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* 
+            flex-direction: column;
+            
+
+            gap: 2.3rem;
+            padding: 60px 20px;
+
+            border-radius: 20px;
+
+            -webkit-box-shadow: 5px 9px 11px 0px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 5px 9px 11px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 9px 11px 0px rgba(0, 0, 0, 0.3); */
+        }
+
+        .maind{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            width: 350px;
+
+            background-color: white;
+
+            gap: 2.3rem;
+            padding: 60px 20px;
+
+            border-radius: 20px;
+
+            -webkit-box-shadow: 5px 9px 11px 0px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 5px 9px 11px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 9px 11px 0px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn{
+            border:none;
+
+            padding: 10px;
+
+            font-size: 15px;
+            font-weight: 500;
+            
+            color: white;
+            border-radius: 5px;
+
+            -webkit-box-shadow: 2px 5px 7px 0px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 2px 5px 7px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 2px 5px 7px 0px rgba(0, 0, 0, 0.3);
+            
+        
+        }
+
+        .btn:hover{
+            cursor: pointer;
+        }
+        .adi{
+            background: linear-gradient(to right, rgb(68, 175, 77), rgb(96, 235, 62));
+            
+        }
+        .adi:hover{
+             background: linear-gradient(to right, rgb(62, 143, 68), rgb(84, 202, 54));
+        }
+
+        .fin{
+            background: linear-gradient(to right, rgb(192, 79, 79), rgb(255, 65, 40))
+        }
+
+        .fin:hover{
+            background: linear-gradient(to right, rgb(163, 68, 68), rgb(250, 83, 61))
+        }
+        
+        .h1c{
+            height: 70px;
+        }
+
+        .inp{
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        input{
+            height: 25px;
+
+            border: none;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.336);
+
+            outline: none;
+            text-align: center;
+
+            font-size: 17px;
+        }
+
+       #put:focus{
+        border: 2px solid rgb(100, 162, 255);
+       }
+
+
+        .select{
+            grid-area: sele;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            gap: 3rem;
+        }
+
+        .msele{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            
+            margin-top: 100px;
+        }
+
+        #selectt{
+            padding: 10px;
+            -webkit-box-shadow: 5px 9px 11px 0px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 5px 9px 11px 0px rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 9px 11px 0px rgba(0, 0, 0, 0.3);
+
+            width: 200px;
+        }
+
+        #selectt option{
+            padding-bottom: 10px;
+        }
+
+        .footer{
+            grid-area: ft;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+
+        footer {
+            font-style: italic;
+            color: black;
+            text-align: center;
+            font-weight: 600;
+             
+        }
+        @media (max-width: 783px){
+            .container{
+                grid-template-columns: 1fr;
+                grid-template-rows: 50vh 40vh 10vh;
+
+                grid-template-areas: "main" "sele" "ft";
+                gap: 2rem;
+
+                font-size: 13px;
+            }
+
+            .select{
+                flex-direction: row;
+            }
+
+            .msele{
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="maind">
+                <div class="h1c">
+                    <h1>NÚMEROS DE 1 A 100</h1>
+                </div>
+                <div class="inp">
+                    <input id="put" type="number" placeholder="Adicione um número">
+                </div>
+                <div>
+                    <button class="btn adi">Adicionar</button>
+                </div>
+            </div>
+        </div>
+        <div class="select">
+            <div class="msele">
+                <select name="selectT" id="selectt" size="10" style="padding-bottom: 5px;">
+                    
+                </select>
+                <button class="btn fin" onclick="calcular()">Finalizar</button>
+            </div>
+
+            <div>
+                <div class="res" >
+                    O resultado vai aqui!
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <footer >
+                <p>tirado do &copy; CursoemVideo</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+
+        let btad = document.querySelector('.adi').addEventListener('click', adicionarN)
+        let select = document.querySelector('#selectt')
+        let res = document.querySelector('.res')
+        let opl = document.querySelector('#opL')
+        var numArr = []
+        var fin = document.querySelector('.fin')
+        let v = 0
+
+
+        function adicionarN(){
+            if(v == 1){
+                select.innerHTML = ''
+                res.innerHTML = ''
+                v = 0
+            }
+            let inputNum = document.querySelector('#put')
+            inputNum = Number(inputNum.value)
+
+            if(inputNum.length == 0 || inputNum <=0 || inputNum >100){
+                alert('ERRO! ADICIONE UM NÚMERO VÁLIDO!')
+            }
+            else{
+                if(numArr.indexOf(inputNum) != -1){
+                 alert('NÚMERO JÁ ADICIONADO!')
+                
+                }else{
+
+                    //  console.log(typeof inputNum)
+                    numArr.push(inputNum)
+                    // console.log(numArr)
+
+                    //  opl.innerHTML = ''
+                    let option = document.createElement('option')
+                    for(let x = 0; x < numArr.length; x++){
+                        option.text = `NÚMERO INSERIDO: ${inputNum}`
+                        option.value = `item${x}`
+                    }
+
+                    select.appendChild(option)
+
+                    
+                }
+                
+
+            }
+          
+        }
+
+        function calcular(){
+            if(numArr.length == 0){
+                alert('DIGITE ALGUM VALOR ANTES DE FINALIZAR')
+
+            }else{
+                let option = document.createElement('option')
+                 
+                 select.appendChild(option)
+
+                 let total = 0
+                 let maiorV = 0
+                 let menorV = 101
+                 let soma = 0
+                 let media = 0
+                
+
+
+                for(let x = 0; x < numArr.length; x++){
+                    soma += numArr[x]
+                    total ++
+
+                    media = soma/total  
+                    
+                    if(maiorV < numArr[x]){
+                        maiorV = numArr[x]
+                    }
+                    if(menorV > numArr[x]){
+                        menorV = numArr[x]
+                    }
+
+                }
+                    console.log(media)
+
+                
+                 res.innerHTML = `<p>TOTAL DE NÚMERO DIGITADOS: ${total}</p><p>O MAIOR VALOR: ${maiorV}</p><p>O MENOR VALOR: ${menorV}</p><p>SOMA DE TODOS: ${soma}</p><p>A MÉDIA DELES: ${media.toFixed(2)}</p>`
+
+                numArr = []
+                v = 1
+            }
+        }
+
+
+    </script>
+</body>
+</html>
