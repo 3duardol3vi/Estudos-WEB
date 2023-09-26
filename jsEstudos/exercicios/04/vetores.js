@@ -123,3 +123,5 @@ if(posicao == -1){
 
 var stringExemplo = "Os números 12 devem ser descartados 34 da string.";
 var resultado = stringExemplo.split(/\d+/);
+
+

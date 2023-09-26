@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+
+    <style>
+
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .principal{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(207, 60, 60);
+
+
+            border-radius: 10px;
+
+            box-shadow: 18px 13px 6px -3px rgba(0,0,0,0.47);
+
+            animation: cair 1s alternate infinite ease-in-out;
+           
+            
+        }
+        @keyframes cair{
+                /* from{transform: rotate(4deg)}
+                to{transform: rotate(-4deg)} */
+
+                0%{transform: rotate(10deg);}
+
+                30%{transform: rotate(-0.5deg);}
+
+                60%{transform: rotate(12deg);}
+
+                100%{transform: rotate(-20deg);}
+                
+            }
+ 
+    </style>
+</head>
+<body>
+    <div class="principal">
+
+    </div>
+</body>
+</html>
