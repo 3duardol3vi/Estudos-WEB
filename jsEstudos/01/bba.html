@@ -32,10 +32,11 @@
         }
 
         #container{
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
+            /* grid-template-columns: 1fr;
             grid-template-rows: 70px auto 30px;
-            grid-template-areas: "header" "main" "footer";
+            grid-template-areas: "header" "main" "footer"; */
 
 
         }
@@ -43,9 +44,9 @@
         #contentHeader{
             background-color: #011936;
 
-            grid-area: header;
+            /* grid-area: header; */
+            height: 70px;
           
-
         }
 
         .headerBox{
@@ -74,7 +75,7 @@
             align-items: center;
             column-gap: 10px;
 
-            animation: enterLogo 0.5s ease-in-out;
+            animation: enter 0.5s ease-in-out;
         }
 
         .logoBox h1{
@@ -85,7 +86,7 @@
         }
 
         .navbar{
-            animation: enterMenu 0.5s ease-in-out;
+            animation: enterI 0.5s ease-in-out;
 
         }
 
@@ -188,6 +189,8 @@
             justify-content: space-around;
 
             /* gap: 2rem; */
+            animation: enterI 0.5s ease-in-out;
+
         }
 
 
@@ -206,6 +209,7 @@
             /* margin: 10px 0; */
 
             text-align: center;
+            text-shadow: 10px 6px 10px rgba(0, 0, 0, 0.493);
         }
 
         .textHero p{
@@ -234,11 +238,115 @@
 
             border-radius: 7px;
 
-            background-color: #4EA699;
+            background-color: black;
+
+            box-shadow: 8px 7px 10px rgba(0, 0, 0, 0.404);
+        }
+
+        .butHero button:hover{
+            background-color: rgba(0, 0, 0, 0.815);
+
+            cursor: pointer;
+        }
+
+        .formBox{
+            width: 1200px;
+            margin: 20px auto;
+
+            background-color: #fff;
+            border-radius: 9px;
+        }
+
+        .formContent{
+            padding: 20px 40px;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        .formContent form div label{
+            font-size: 1.9rem;
+            font-weight: 500;
+
+        }
+
+        form{
+            width: 70%;
+            
+        }
+
+        .boxUser_Infor{
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+
+        }
+
+        hr{
+            margin: 50px 0;
+            background-color: black;
+
+            height: 2px;
+
+        }
+
+        .boxUser_Infor input, .boxEndereco input, select{
+            width: 90%;
+            height: 4.0rem;
+
+            font-size: 1.8rem;
+
+            border: none;
+            border-bottom: 1px solid black;
+            outline: none;
+            text-align: center;
+        }
+
+        .boxUser_Infor div{
+            margin: 9px 0px;
+
+        }
+
+        .boxEndereco div{
+            margin: 9px 0px;
+
+        }
+
+        .boxUser{
+            grid-column: 1/3;
+        }
+        .boxEmail{
+            grid-column: 1/3;
+
+        }
+        .boxPass{
+            grid-column: 1/2;
+
+        }
+
+        .boxEndereco{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+
+            
+        }
+
+        .boxRua{
+            grid-column: 1/3;
         }
 
         @media (max-width: 1222px){
             .headerBox{
+                width: 90%;
+            }
+
+            .formBox{
                 width: 90%;
             }
         }
@@ -299,13 +407,13 @@
         } */
 
 
-        @keyframes enterLogo{
+        @keyframes enter{
             from{transform: translateX(-50px); opacity: 0;}
             to{transform: translateX(0px); opacity: 100%;}
 
         }
 
-        @keyframes enterMenu{
+        @keyframes enterI{
             from{transform: translateX(50px); opacity: 0;}
             to{transform: translateX(0px); opacity: 100%;}
 
@@ -327,8 +435,8 @@
                 
                 <nav class="navbar">
                     <ul>
-                        <a href="#">
-                            <li class="listitem"><i class="fa-solid fa-house"></i>INÍCIO</li>
+                        <a href="#boxUser_Infor">
+                            <li class="listitem"><i class="fa-solid fa-pen"></i>CADASTRAR</li>
                         </a>
                         <a href="#">
                             <li class="listitem"><i class="fa-solid fa-phone"></i>CONTATOS</li>
@@ -364,6 +472,93 @@
                         </button>
                     </div>
                 </div>
+            </div>
+
+            <div class="formBox">
+                <div class="formContent">
+                    <form action="">
+                        <div class="boxUser_Infor" id="boxUser_Infor">
+                            <div class="boxUser">
+                                <label for="username">NOME: </label>
+                                <input type="text" name="iusername" id="username">
+                            </div>
+                            <div class="boxEmail">
+                                <label for="email">EMAIL: </label>
+                                <input type="email" name="iemail" id="email">
+                            </div>
+                            <div class="boxPass">
+                                <label for="password">SENHA: </label>
+                                <input type="password" name="ipassword" id="password">
+                            </div>
+                            <div class="boxRepeat_Pass">
+                                <label for="Repassword">REPITA A SENHA: </label>
+                                <input type="password" name="Repassword" id="Repassword">
+                            </div>
+                        </div>
+                          
+                            <hr>
+
+                        <div class="boxEndereco">
+                            <div class="boxUF">
+                                <label for="">ESTADO: </label>
+                                <select id="estado" name="estado" size="1">
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                    <option value="EX">Estrangeiro</option>
+                                </select>
+                            </div>
+                            <div class="boxCidade">
+                                <label for="">CIDADE: </label>
+                                <input type="text" name="" id="">
+                            </div>
+                            
+                            <div class="boxbairro">
+                                <label for="">BAIRRO: </label>
+                                <input type="text" name="" id="">
+                            </div>
+                            
+                            <div class="boxRua">
+                                <label for="">LOGRADOURO: </label>
+                                <input type="text" name="" id="">
+                            </div>
+                             <div class="boxNum">
+                                <label for="">NÚMERO: </label>
+                                <input type="text" name="" id="">
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+            <div style="background-color: #011936; height: 760px;">
+
             </div>
         </main>
 
